@@ -4,7 +4,7 @@ export default defineConfig({
     driver: "pg",
     dbCredentials: {
         connectionString:
-            "postgresql://images_owner:2fDXoNvk0ZOm@ep-solitary-night-a1uydhpn.ap-southeast-1.aws.neon.tech/images?sslmode=require",
+            "postgresql://neondb_owner:npg_8NFseOV0qpro@ep-rough-haze-a1c5ecfa-pooler.ap-southeast-1.aws.neon.tech/neondb?sslmode=require&channel_binding=requireepostgresql://neondb_owner:npg_PJlRfKeG5Ak6@ep-rough-haze-a1c5ecfa-pooler.ap-southeast-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require",
     },
     verbose: true,
     strict: true,

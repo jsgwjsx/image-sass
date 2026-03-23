@@ -26,14 +26,10 @@ export default function DashboardAppList() {
                         管理你的应用，快速进入设置页面。
                     </p>
                 </div>
-                <Button
-                    asChild
-                    onClick={() => {
-                        router.push("/dashboard/apps/new");
-                    }}
-                    className="h-10"
-                >
-                    <Link href="/dashboard/apps/new">创建新应用</Link>
+                <Button onClick={()=>{
+                   location.href = "/dashboard/apps/new"  
+                }} className="h-10">
+                    创建新应用
                 </Button>
             </div>
 

@@ -11,7 +11,7 @@ import { usePasteFile } from "@/hooks/usePasteFile";
 import { UploadPreview } from "@/components/feature/UploadPreview";
 import { FileList } from "@/components/feature/FileList";
 import { FilesOrderByColumn } from "@/server/routes/file";
-import { MoveUp, MoveDown, Settings } from "lucide-react";
+import { MoveUp, MoveDown, Settings, MoveLeft } from "lucide-react";
 import Link from "next/link";
 import { UpgradeDialog } from "./Upgrade";
 
@@ -108,6 +108,10 @@ export default function AppPage({
         children = (
             <div className="mx-auto h-full">
                 <div className="container flex justify-between items-center h-[60px]">
+                    <div className="flex justify-start gap-4">
+                        <Button asChild>
+                            <Link href='/dashboard'><MoveLeft></MoveLeft>&ensp;Back</Link>
+                    </Button>
                     <Button
                         onClick={() => {
                             setOrderBy((current) => ({
@@ -120,6 +124,8 @@ export default function AppPage({
                         Created At{" "}
                         {orderBy.order === "desc" ? <MoveUp /> : <MoveDown />}
                     </Button>
+                    </div>
+                    
                     <div className="flex justify-center gap-2">
                         <UploadButton uppy={uppy}></UploadButton>
                         <Button

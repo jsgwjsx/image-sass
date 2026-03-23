@@ -10,6 +10,8 @@ import { redirect } from "next/navigation";
 import { ThemeProvider } from "./ThemeProvider";
 import { ThemeToggle } from "./ThemeToggle";
 import { Plan } from "./Plan";
+import { Button } from "@/components/ui/Button";
+import Link from "next/link";
 
 export default async function DashboardLayout(props: {
     children: React.ReactNode;
@@ -25,7 +27,7 @@ export default async function DashboardLayout(props: {
     return (
         <ThemeProvider>
             <div className="h-screen">
-                <nav className="h-[80px] border-b relative">
+                <nav className="h-[80px] border-b relative flex">
                     <div className="container flex gap-2 justify-end items-center h-full">
                         <ThemeToggle></ThemeToggle>
                         <DropdownMenu>
