@@ -207,6 +207,7 @@ export function FileList({
                                 contentType={file.contentType}
                                 id={file.id}
                                 name={file.name}
+                                url={file.url}
                             ></RemoteFileItem>
                         </div>
                     );
