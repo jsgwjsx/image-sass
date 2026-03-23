@@ -38,14 +38,17 @@ export function RemoteFileItem({
     contentType,
     name,
     id,
+    url
 }: {
     contentType: string;
     name: string;
     id: string;
+    url: string;
 }) {
     const isImage = contentType.startsWith("image");
 
     return (
-        <FileItem isImage={isImage} url={`/image/${id}`} name={name}></FileItem>
+        // <FileItem isImage={isImage} url={`/image/${id}`} name={name}></FileItem>
+        <FileItem isImage={isImage} url={url} name={name}></FileItem>
     );
 }
