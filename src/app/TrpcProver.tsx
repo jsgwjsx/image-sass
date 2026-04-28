@@ -15,3 +15,4 @@ export function TRPCProvider({ children }: { children: ReactNode }) {
         </trpcClientReact.Provider>
     );
 }
+
